@@ -33,7 +33,7 @@ waqImport <- function(filename, freq.in.sec = 60, trunc.unit="min", Correction =
                 rawEndDate[3],sep="-"),
           paste(rawEndDate[4], rawEndDate[5], sep=":")
           )
-    cat(paste("Start End:", AscStartDateTime, AscEndDateTime, "\n"))
+    cat(paste(filename, AscStartDateTime, AscEndDateTime, "\n"))
     ## Utána: bc, 74, 13, 3c , 0, 0, 40, 3f ...
     readBin(newdata, "raw", n=76)
     rawData <- readBin(newdata, integer(), size=2, n=rawDataLength)

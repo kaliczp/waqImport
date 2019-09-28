@@ -2,6 +2,11 @@
 ### ~/Kutatás/binHidegviz/ -ben fejlesztve.
 waqImport <- function(filename, freq.in.sec = 60, trunc.unit="min", Correction = 10){
     require(xts)
+    ## Determination of size in bytes
+    size <- file.info(filename)$size
+    if(size == 0) {
+        stop("No data in file!")
+    }
     ### Fejléc feldolgozása
     newdata <- file(filename, "rb")
     rawHead <- readBin(newdata, "raw", n=158)

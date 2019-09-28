@@ -1,0 +1,19 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:2 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:t todo:t |:t
+#+TITLE: Binary importer of old Dataqua format for R
+#+DATE: <2019-09-28 szo>
+#+AUTHOR: Kalicz Péter
+#+EMAIL: kalicz.peter@uni-sopron.hu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 26.1 (Org mode 9.1.9)
+
+This script reads in binary files from old meteorological data-logger
+manufactured by Dataqua-2002 Ltd (Hungary).
+
+* Known bugs
+Timestamp conversion is erroneous if the frequency different from one minutes.

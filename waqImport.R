@@ -22,6 +22,7 @@ waqImport <- function(filename, freq.in.sec = 60, trunc.unit="min", Correction =
     AscStartDateTime <- paste(StartDate, StartTime)
     StartDateTime <- as.POSIXct(AscStartDateTime)
     LoggerStart <- trunc(StartDateTime, trunc.unit)
+    ## If frequenci different from trunc.unit, treat differences works 30 min
     TimeDiff <- difftime(StartDateTime,LoggerStart, units="sec") 
     freq.multi <- ifelse( TimeDiff > freq.in.sec, 2, 1)
     LoggerStart <- LoggerStart + freq.multi * freq.in.sec

@@ -4,9 +4,7 @@ waqImport <- function(filename, freq.in.sec = 60, trunc.unit="min", Correction =
     require(xts)
     ## Determination of size in bytes
     size <- file.info(filename)$size
-    if(size == 0) {
-        stop("No data in file!")
-    }
+    stopifnot(size > 0) ## check case of empty file
     ### Process header
     newdata <- file(filename, "rb")
     rawHead <- readBin(newdata, "raw", n=158)

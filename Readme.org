@@ -17,3 +17,8 @@ manufactured by Dataqua-2002 Ltd (Hungary).
 
 * Known bugs
 Timestamp conversion is erroneous if the frequency different from one minutes.
+
+* TODOs
+- Save stored logger start/stop as an attribute
+- Refine date/time processing
+- Text in header save as attribute
